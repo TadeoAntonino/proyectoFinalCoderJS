@@ -1,0 +1,223 @@
+/* Estilos Generales*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&family=Montserrat:wght@100;200;400&family=Nanum+Gothic:wght@400;700&family=Water+Brush&display=swap");
+
+@import "animate.css";
+
+$colores: (
+  black: #191919,
+  white: #fff7ec,
+  bg: #fff6ea,
+);
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "_header";
+@import "_footer";
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#root {
+  background-color: map-get($colores, bg);
+  width: 100%;
+  height: 100;
+}
+
+/* Estilos Inicio */
+
+.galeria-index {
+  margin-top: 4.55vh;
+  margin-bottom: 5vh;
+  .cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    .card-cont {
+      width: 21.8pc;
+      height: 17.5pc;
+      @include flex-row-center;
+      flex-direction: column;
+      border: none;
+      transition: transform 0.5s;
+      img {
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        &:hover {
+          filter: none;
+        }
+      }
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+      .text-img {
+        margin: 0;
+        background-color: map-get($colores, black);
+        color: map-get($colores, white);
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+
+/* Estilos Servicios */
+
+.galeria-serv {
+  .cards-row {
+    @include flex-row-center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5.1vh;
+    margin-bottom: 5.1vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: map-get($colores, bg);
+    gap: 1vh;
+    font-family: "Montserrat", sans-serif;
+    .col {
+      @include flex-row-center;
+      .card {
+        width: 40vh;
+        background-color: #dcdbdb;
+        border-style: none;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
+        .card-img-top {
+          height: 40vh;
+          width: 95%;
+          margin: 1vh;
+          padding: 1vh;
+        }
+        .card-body {
+          .card-title {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Estilos Galería de Nuestros Trabajos*/
+
+.galeria-obras {
+  @extend .galeria-index;
+  gap: 7vh;
+  padding: 3vh;
+  margin-top: 9.25vh;
+  margin-bottom: 9.3vh;
+}
+
+/*Estilos Nosotros*/
+
+.nosotros {
+  margin-top: 12.2vh;
+  margin-bottom: 12.3vh;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #191919;
+  .foto-nos {
+    justify-content: start;
+    align-items: center;
+    img {
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .text-nos {
+    @extend .foto-nos;
+    justify-content: end;
+    font-size: 1.7rem;
+    span {
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
+
+/*Estilos de Contacto*/
+
+.contacto {
+  width: 100%;
+  margin-top: 4.8vh;
+  margin-bottom: 4.99vh;
+  @include flex-row-center;
+  .formulario {
+    @include flex-row-center;
+  }
+  .form {
+    padding: 5vh;
+    @include flex-row-center;
+    flex-direction: column;
+    gap: 1.5pc;
+    .form-2 {
+      @include flex-row-center;
+      flex-direction: column;
+      gap: 2pc;
+      div {
+        .datos {
+          background-color: map-get($colores, black);
+          color: map-get($colores, white);
+          text-align: center;
+          @include flex-row-center;
+          flex-direction: column;
+          width: 22pc;
+          height: 3pc;
+          border-radius: 10px;
+          border-style: none;
+          transition: transform 0.5s;
+          &:hover {
+            transform: scale(1.1, 1.1);
+          }
+        }
+        .consulta {
+          @extend .datos;
+          height: 10pc;
+          width: 22pc;
+        }
+        .boton {
+          @extend .datos;
+          width: 10pc;
+        }
+      }
+    }
+  }
+  .mapa {
+    padding: 5vh;
+    @include flex-row-center;
+    flex-direction: column;
+    gap: 1pc;
+    h2 {
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 35pc;
+      border-radius: 10px;
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+}

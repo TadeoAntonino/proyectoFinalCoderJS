@@ -1,0 +1,40 @@
+.logo {
+  width: 60px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.font-color {
+  color: map-get($colores, white) !important;
+  margin: 0;
+}
+
+.nav-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  ul {
+    li {
+      a {
+        &:hover {
+          filter: saturate(100) !important;
+        }
+      }
+    }
+  }
+}
+.title-nav {
+  display: flex;
+}
+
+.navbar-toggler {
+  background-color: #363a3d;
+}
+
+.navbar-brand {
+  margin-right: 0;
+  gap: 10px;
+  padding: 0;
+}
