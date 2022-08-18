@@ -1,5 +1,3 @@
-let metrosCuadrados = document.getElementById("mCuadrados").value
-
 const TipoEstructura = [
     {
         material: "Madera",
@@ -23,21 +21,20 @@ const TipoEstructura = [
     }
 ]
 
-
 let btn = document.getElementById("btnCalculo")
 btn.addEventListener("click", calcular)
-function calcular(){
+function calcular(e){
+    e.preventDefault()
+    let metrosCuadrados = document.getElementById("mCuadrados").value
     let materialElegido = document.getElementById("materialEstructura").value
+    
     let precioMaterial = TipoEstructura.find((element) => element.material === materialElegido).precio;
-
+    
     let precio = metrosCuadrados * precioMaterial;
 
     let divPrecio = document.getElementById("presupuestoEstimado")
 
-    divPrecio.innerHTML = "<h2>El precio estimado es de: </h2>";
+    divPrecio.innerHTML = `<h2>El precio estimado es de: ${precio}</h2>`;
 }
 
 calcular();
-
-
-
