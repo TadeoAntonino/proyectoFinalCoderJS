@@ -7,7 +7,7 @@
     <meta name="description" content="Estudio de arquitectura" />
     <meta
       name="keywords"
-      content="arquitectura, arquitecto, construccion, casa, trabajos, obras, proyectos"
+      content="arquitectura, arquitecto, construccion, casa, piscina, torre, estadio, proyectos, obra, obras"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="shortcut icon" href="../assets/logo.png" />
-    <title>Nuestros Trabajos | CODER</title>
+    <title>Calculadora | CODER</title>
   </head>
   <body>
     <div id="root">
@@ -64,12 +64,12 @@
                   <a class="nav-link font-color" href="./servicios.html"
                     >Servicios</a
                   >
-                  <li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a class="nav-link font-color" href="./calculadora.html"
                       >Calculadora</a
                     >
                   </li>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link font-color" href="./trabajos.html"
                     >Nuestros Trabajos</a
@@ -92,90 +92,51 @@
       </header>
 
       <main>
-        <section class="galeria-obras container-fluid">
-          <div class="cards-row row">
-            <div class="card-cont">
-              <img
-                src="../assets/asilo.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Asilo"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Asilo
-              </h3>
+        <div class="container-fluid galeria-serv">
+            <div class="cards-row row">
+              <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col animate__animated animate__bounceInRight">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Estime aquí su presupuesto</h5>
+
+                      <form class="form-2 animate__animated animate__bounceInRight" action="">
+                        <div> <p>Ingrese la cantidad de metros cuadrados que desea</p> <input id="mCuadrados" type="number"> </div> <br>
+                        <div> <p>Seleccione el tipo de estructura</p> 
+                            <select id="materialEstructura">
+                            <option>Madera</option>
+                            <option>Hierro</option>
+                            <option>Hormigón</option>
+                            <option>Materiales reciclados</option>
+                            </select>
+                         </div> <br>
+                        <div> <button id="btnCalculo" type="submit">Calcular</button> </div>
+                    </form>
+
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="card-cont">
-              <img
-                src="../assets/biblioteca.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Biblioteca"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Biblioteca
-              </h3>
+        </div>
+      </div>
+
+      <div class="container-fluid galeria-serv">
+        <div class="cards-row row">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate__animated animate__bounceInRight">
+              <div class="card h-100">
+                <div class="card-body">
+
+                  <div id="presupuestoEstimado">
+
+                  </div>
+
+                </div>
+              </div>
             </div>
-            <div class="card-cont">
-              <img
-                src="../assets/campus.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Campus Universitario"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Campus Universitario
-              </h3>
-            </div>
-            <div class="card-cont">
-              <img
-                src="../assets/estadio.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Estadio"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Estadio
-              </h3>
-            </div>
-            <div class="card-cont">
-              <img
-                src="../assets/galeria.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Galeria"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Galeria
-              </h3>
-            </div>
-            <div class="card-cont">
-              <img
-                src="../assets/iglesia.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Iglesia"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Iglesia
-              </h3>
-            </div>
-            <div class="card-cont">
-              <img
-                src="../assets/teatro.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Teatro"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Teatro
-              </h3>
-            </div>
-            <div class="card-cont">
-              <img
-                src="../assets/vivienda.png"
-                class="animate__animated animate__bounceInRight"
-                alt="Hogar"
-              />
-              <h3 class="text-img animate__animated animate__bounceInRight">
-                Hogar
-              </h3>
-            </div>
-          </div>
-        </section>
+        </div>
+    </div>
+  </div>
       </main>
 
       <footer class="footer bg-dark text-center text-white">
@@ -250,4 +211,5 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"
   ></script>
+ <!-- <script src="/js/calculadoraPresupuesto.js"></script> -->
 </html>

@@ -1,43 +1,43 @@
-let metrosCuadrados = parseFloat(prompt("Ingrese los metros cuadrados que desea:"))
+let metrosCuadrados = document.getElementById("mCuadrados").value
 
 const TipoEstructura = [
     {
-        material: "madera",
+        material: "Madera",
         precio: 100,
         tiempo: "1 semana cada 100 metros cuadrados",
     },
     {
-        material: "metal",
+        material: "Hierro",
         precio: 300,
         tiempo: "3 semanas cada 100 metros cuadrados",
     },
     {
-        material: "material reciclado",
+        material: "Materiales reciclados",
         precio: 200,
         tiempo: "2 semanas cada 100 metros cuadrados",
     },
     {
-        material: "hormigón",
+        material: "Hormigón",
         precio: 400,
         tiempo: "3 semanas cada 100 metros cuadrados",
     }
 ]
 
-function seleccionarMaterial (){
-    let materialElegido = prompt("Indiquenos si desea una estructura de madera, metal, material reciclado u hormigón.")
-    const estructura = TipoEstructura.find((elemento) => {
-        return elemento.material == materialElegido;
-    })
 
-    alert("Usted eligió: " + materialElegido);
+let btn = document.getElementById("btnCalculo")
+btn.addEventListener("click", calcular)
+function calcular(){
+    let materialElegido = document.getElementById("materialEstructura").value
+    let precioMaterial = TipoEstructura.find((element) => element.material === materialElegido).precio;
 
-    function calcularPrecio (){
-     let precioFinal = TipoEstructura.find((element) => element.material === materialElegido).precio
-     alert("El precio estimado para su estructura de " + materialElegido + " es de: " + precioFinal*metrosCuadrados);
-    }
+    let precio = metrosCuadrados * precioMaterial;
 
-    calcularPrecio();
+    let divPrecio = document.getElementById("presupuestoEstimado")
+
+    divPrecio.innerHTML = "<h2>El precio estimado es de: </h2>";
 }
 
-seleccionarMaterial();
+calcular();
+
+
 
