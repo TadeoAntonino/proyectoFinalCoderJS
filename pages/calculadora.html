@@ -21,6 +21,12 @@
     />
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="shortcut icon" href="../assets/logo.png" />
+
+    <!-- sweetAlert2
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    --> 
+
     <title>Calculadora | CODER</title>
   </head>
   <body>
@@ -98,11 +104,11 @@
                 <div class="col animate__animated animate__bounceInRight">
                   <div class="card h-100">
                     <div class="card-body">
-                      <h5 class="card-title">Estime aquí su presupuesto</h5>
+                      <h5 class="card-title">Estructura</h5>
 
                       <form class="form-2 animate__animated animate__bounceInRight" action="">
                         <div> <p>Ingrese la cantidad de metros cuadrados que desea</p> <input id="mCuadrados" type="number"> </div> <br>
-                        <div> <p>Seleccione el tipo de estructura</p> 
+                        <div> <p>Seleccione el material</p> 
                             <select id="materialEstructura">
                             <option>Madera</option>
                             <option>Hierro</option>
@@ -110,33 +116,91 @@
                             <option>Materiales reciclados</option>
                             </select>
                          </div> <br>
-                        <div> <button id="btnCalculo" type="submit">Calcular</button> </div>
+                        <div> <button id="btnEstructura" type="submit">Agregar</button> </div>
                     </form>
 
                     </div>
                   </div>
                 </div>
+
+                <div class="col animate__animated animate__bounceInRight">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Piso</h5>
+
+                      <form class="form-2 animate__animated animate__bounceInRight" action="">
+                        <div> <p>Seleccione el material</p> 
+                            <select id="materialPiso">
+                            <option>Madera</option>
+                            <option>Porcelanato</option>
+                            <option>Mosaicos</option>
+                            <option>Cemento pulido</option>
+                            </select>
+                         </div> <br>
+                        <div> <button id="btnPiso" type="submit">Agregar</button> </div>
+                    </form>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col animate__animated animate__bounceInRight">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Paredes</h5>
+
+                      <form class="form-2 animate__animated animate__bounceInRight" action="">
+                        <div> <p>Seleccione el material</p> 
+                            <select id="materialPared">
+                            <option>Madera</option>
+                            <option>Ladrillo visto</option>
+                            <option>Durlock</option>
+                            <option>Piedra</option>
+                            </select>
+                         </div> <br>
+                        <div> <button id="btnPared" type="submit">Agregar</button> </div>
+                    </form>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col animate__animated animate__bounceInRight">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Techo</h5>
+
+                      <form class="form-2 animate__animated animate__bounceInRight" action="">
+                        <div> <p>Seleccione el material</p> 
+                            <select id="materialTecho">
+                            <option>Chapa</option>
+                            <option>Tejas</option>
+                            <option>Losa</option>
+                            </select>
+                         </div> <br>
+                        <div> <button id="btnTecho" type="submit">Agregar</button> </div>
+                    </form>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col animate__animated animate__bounceInRight">
+                  <div class="card h-100">
+                    <div class="card-body">
+    
+                      <div id="presupuestoEstimado">
+    
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+
             </div>
         </div>
       </div>
 
-      <div class="container-fluid galeria-serv">
-        <div class="cards-row row">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col animate__animated animate__bounceInRight">
-              <div class="card h-100">
-                <div class="card-body">
-
-                  <div id="presupuestoEstimado">
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-  </div>
       </main>
 
       <footer class="footer bg-dark text-center text-white">
