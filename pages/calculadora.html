@@ -104,105 +104,77 @@
                 <div class="col animate__animated animate__bounceInRight">
                   <div class="card h-100">
                     <div class="card-body">
-                      <h5 class="card-title">Estructura</h5>
+                      <h5 class="card-title">Calculadora</h5>
 
-                      <form class="form-2 animate__animated animate__bounceInRight" action="">
-                        <div> <p>Ingrese la cantidad de metros cuadrados que desea</p> <input id="mCuadradosE" type="number"> </div> <br>
-                        <div> <p>Seleccione el material</p> 
+                      <form id="calculator" class="form-2 animate__animated animate__bounceInRight">
+                        <div> 
+                          <p>Ingrese la cantidad de metros cuadrados que desea</p> 
+                          <input type="number" id="mCuadrados" placeholder="metros">
+                        </div> 
+                          <br/>
+                        <div> 
+                          <p>Seleccione el material de la Estructura</p> 
                             <select id="materialEstructura">
                             <option>Madera</option>
                             <option>Hierro</option>
                             <option>Hormigón</option>
                             <option>Materiales reciclados</option>
                             </select>
-                         </div> <br>
-                        <div> <button id="btnEstructura" type="submit">Agregar</button> </div>
-                    </form>
+                          </div> <br/>
+
+                            <div> 
+                              <p>Seleccione el material del Piso</p> 
+                              <select id="materialPiso">
+                              <option>Madera</option>
+                              <option>Porcelanato</option>
+                              <option>Mosaicos</option>
+                              <option>Cemento pulido</option>
+                              </select>
+                           </div> <br/>
+
+                         
+
+                         <div> <p>Seleccione el material para Paredes</p> 
+                          <select id="materialPared">
+                          <option>Madera</option>
+                          <option>Ladrillo visto</option>
+                          <option>Durlock</option>
+                          <option>Piedra</option>
+                          </select>
+                       </div> <br/>
+
+                       <div> <p>Seleccione el material del Techo</p> 
+                        <select id="materialTecho">
+                        <option>Chapa</option>
+                        <option>Tejas</option>
+                        <option>Losa</option>
+                        </select>
+                     </div> <br/>
+
+                        <div> <button id="btnCalcular" type="submit">Calcular Total</button> </div>
+                      </form>
 
                     </div>
                   </div>
                 </div>
 
-                <div class="col animate__animated animate__bounceInRight">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="card-title">Piso</h5>
 
-                      <form class="form-2 animate__animated animate__bounceInRight" action="">
-                        <div> <p>Ingrese la cantidad de metros cuadrados que desea</p> <input id="mCuadradosPi" type="number"> </div> <br>
-                        <div> <p>Seleccione el material</p> 
-                            <select id="materialPiso">
-                            <option>Madera</option>
-                            <option>Porcelanato</option>
-                            <option>Mosaicos</option>
-                            <option>Cemento pulido</option>
-                            </select>
-                         </div> <br>
-                        <div> <button id="btnPiso" type="submit">Agregar</button> </div>
-                    </form>
+              </div>
+              </div>
 
+              <div class="col animate__animated animate__bounceInRight">
+                <div class="card h-100">
+                  <div class="card-body">
+  
+                    <div id="presupuestoEstimado">
+                      <div> <button id="btnGuardar" type="submit">Guardar</button> </div>
                     </div>
+  
                   </div>
                 </div>
+              </div>
 
-                <div class="col animate__animated animate__bounceInRight">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="card-title">Paredes</h5>
-
-                      <form class="form-2 animate__animated animate__bounceInRight" action="">
-                        <div> <p>Ingrese la cantidad de metros cuadrados que desea</p> <input id="mCuadradosPa" type="number"> </div> <br>
-                        <div> <p>Seleccione el material</p> 
-                            <select id="materialPared">
-                            <option>Madera</option>
-                            <option>Ladrillo visto</option>
-                            <option>Durlock</option>
-                            <option>Piedra</option>
-                            </select>
-                         </div> <br>
-                        <div> <button id="btnPared" type="submit">Agregar</button> </div>
-                    </form>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col animate__animated animate__bounceInRight">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="card-title">Techo</h5>
-
-                      <form class="form-2 animate__animated animate__bounceInRight" action="">
-                        <div> <p>Ingrese la cantidad de metros cuadrados que desea</p> <input id="mCuadradosT" type="number"> </div> <br>
-                        <div> <p>Seleccione el material</p> 
-                            <select id="materialTecho">
-                            <option>Chapa</option>
-                            <option>Tejas</option>
-                            <option>Losa</option>
-                            </select>
-                         </div> <br>
-                        <div> <button id="btnTecho" type="submit">Calcular Total</button> </div>
-                    </form>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col animate__animated animate__bounceInRight">
-                  <div class="card h-100">
-                    <div class="card-body">
-    
-                      <div id="presupuestoEstimado">
-    
-                      </div>
-    
-                    </div>
-                  </div>
-                </div>
-
-            </div>
-        </div>
-      </div>
+          </div>
 
       </main>
 
@@ -273,13 +245,19 @@
       </footer>
     </div>
   </body>
+  <script>
+    let cambios = function() {
+      this.setAttribute("value", this.value);
+    }
+    document.getElementById("mCuadrados").onChange = cambios
+  </script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"
   ></script>
-    <script src="/js/calculadoraPresupuesto.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="../js/login.js" defer></script>
+    <script type="module" src="/js/calculadoraPresupuesto.js"></script>
+    
 
 </html>
