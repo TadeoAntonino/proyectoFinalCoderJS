@@ -1,4 +1,4 @@
-import data from "../content/data.js";
+import data from "../content/data.json";
 
 // SweetAlert 
 
@@ -21,8 +21,11 @@ sweetAlert = async () => {
     return { login: login, password: password };
   },
 }).then((result) => {
-  localStorage.setItem('usuario', result.value.login )
-  localStorage.setItem('contrasena', result.value.password)
+  const user = JSON.stringify(result.value.login)
+  const pass = JSON.stringify(result.value.password)
+
+  localStorage.setItem('usuario', user)
+  localStorage.setItem('contrasena', pass)
   Swal.fire(
     `
     Login: ${result.value.login}
@@ -73,8 +76,11 @@ function calcular(e) {
     let precioT = metrosCuadrados * precioMaterialT;
   
     let precioTotal = precioE + precioPa + precioPi + precioT;
-  
-    localStorage.setItem("presupuesto", precioTotal)
+
+
+    const precioJSON = JSON.stringify(precioTotal)
+
+    localStorage.setItem("presupuesto", precioJSON)
   
     let divPrecio = document.getElementById("presupuestoEstimado");
       
@@ -95,6 +101,8 @@ const contrasena = localStorage.getItem("contrasena")
   
 
 
-
+  fetch("./content/data.json")
+  .then(res => res.json())
+  .then(data => console.log(data))
 
 
