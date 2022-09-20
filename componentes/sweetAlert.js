@@ -3,7 +3,7 @@
 export const sweetAlert = async () => {
   await Swal.fire({
     title: "Registrese",
-    html: `<input type="text" id="login" class="swal2-input" placeholder="Username">
+    html: `<input type="text" id="login" class="swal2-input" placeholder="Name">
     <input type="password" id="password" class="swal2-input" placeholder="Password">`,
     confirmButtonText: "Registrarme",
     focusConfirm: false,

@@ -81,5 +81,23 @@
       "precio": 80,
       "tiempo": "2 semanas cada 100 metros cuadrados"
     }
-  ]
+  ],
+  "EstiloArquitectonico": [
+    {
+        "estilo" : "Tradicional",
+        "foto" : "../assets/arq_tradicional.png"
+    },
+    {
+        "estilo" : "Moderna",
+        "foto" : "../assets/arq_moderna.png"
+    },
+    {
+        "estilo" : "Sustentable",
+        "foto" : "../assets/arq_sustentable.png"
+    },
+    {
+        "estilo" : "Regional",
+        "foto" : "../assets/arq_regional.png"
+    }
+]
 }

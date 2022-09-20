@@ -109,12 +109,22 @@
                       class="form-2 animate__animated animate__bounceInRight"
                     >
                       <div>
-                        <p>Ingrese la cantidad de metros cuadrados que desea</p>
+                        <p>Ingrese la cantidad de metros cuadrados que desea.</p>
                         <input
                           type="number"
                           id="mCuadrados"
                           placeholder="metros"
                         />
+                      </div>
+                      <br />
+                      <div>
+                        <p>Seleccione el estilo arquitectonico que desee.</p>
+                        <select id="estiloArq">
+                          <option>Tradicional</option>
+                          <option>Moderna</option>
+                          <option>Sustentable</option>
+                          <option>Regional</option>
+                        </select>
                       </div>
                       <br />
                       <div>
@@ -169,16 +179,16 @@
                   </div>
                 </div>
               </div>
+              <div id="imagenArq"></div>
             </div>
+          
           </div>
 
           <div class="col animate__animated animate__bounceInRight">
             <div class="card h-100">
               <div class="card-body">
                 <div id="presupuestoEstimado">
-                  <div>
-                    <button id="btnGuardar" type="submit">Guardar</button>
-                  </div>
+
                 </div>
               </div>
             </div>
